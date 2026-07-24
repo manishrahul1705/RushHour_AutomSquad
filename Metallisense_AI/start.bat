@@ -1,5 +1,4 @@
 
-
 @echo off
 REM Quick start script for MetalliSense AI Service (Windows)
 

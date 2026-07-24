@@ -31,6 +31,8 @@
 
 The system continuously acquires live alloy composition data from industrial spectrometers through **OPC UA**, processes it using advanced Machine Learning models, and generates intelligent alloy correction recommendations before production defects occur.
 
+It now also includes an **Explainable AI Copilot** that provides operator-friendly analysis, AI-generated explanations, chat assistance, and voice-enabled support for faster decision-making on the shop floor.
+
 Unlike traditional approaches that rely on manual intervention and post-production inspection, MetalliSense enables **predictive manufacturing** by providing real-time decision support with a **Human-in-the-Loop** workflow. Operators can review and approve AI-generated recommendations, ensuring transparency, safety, and reliability.
 
 By optimizing alloy composition in real time, MetalliSense helps industries:
@@ -55,6 +57,9 @@ The solution is designed with a scalable **Industry 4.0 architecture**, making i
 - AI-Based Alloy Optimization
 - Predictive Quality Analysis
 - Human-in-the-Loop Decision Support
+- Explainable AI Copilot
+- AI Chat Assistance
+- Voice-Enabled AI Explanations
 - Interactive Smart Dashboard
 - OPC UA Industrial Connectivity
 - Complete Traceability & Audit Logging
@@ -116,6 +121,7 @@ Industrial Spectrometer
 - Scikit-Learn
 - Pandas
 - NumPy
+- Google Gemini / AI Copilot
 
 ### Database
 - MongoDB

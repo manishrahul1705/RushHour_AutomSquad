@@ -82,22 +82,6 @@ The following files/directories will be created when you run `setup.bat` or `set
 
 ## 📐 Code Statistics
 
-### Lines of Code (Approximate)
-
-| Component | Lines |
-|-----------|-------|
-| Main Application (main.py) | ~250 |
-| Configuration (config.py) | ~60 |
-| Schemas (schemas.py) | ~70 |
-| Grade Specifications (grade_specs.py) | ~150 |
-| Synthetic Generator (synthetic_gen.py) | ~250 |
-| Anomaly Agent (anomaly_agent.py) | ~300 |
-| Alloy Agent (alloy_agent.py) | ~350 |
-| Training Scripts (both) | ~250 |
-| Inference Modules (both) | ~150 |
-| Setup Script (setup.py) | ~150 |
-| Test Script (test_api.py) | ~150 |
-| **Total Python Code** | **~2,180 lines** |
 
 ### Documentation
 

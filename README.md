@@ -311,18 +311,3 @@ MetalliSense contributes towards:
 
 **To empower manufacturing industries with intelligent AI-driven decision support that improves alloy quality, enhances operational efficiency, minimizes environmental impact, and accelerates the transition toward sustainable Industry 4.0 manufacturing.**
 
----
-
-# License
-
-This project is developed for academic research, innovation, and hackathon purposes.
-
----
-
-# Acknowledgement
-
-We sincerely thank our mentors, faculty members, and Sri Eshwar College of Engineering for their continuous guidance and support throughout the development of MetalliSense.
-
----
-
-## Made with ❤️ by Team AUTOM SQUAD

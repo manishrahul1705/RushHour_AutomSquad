@@ -1,7 +1,7 @@
 # MetalliSense
-### AI-Powered Real-Time Alloy Optimization for Sustainable Manufacturing
+## AI-Powered Real-Time Alloy Optimization for Sustainable Manufacturing
 
-> **An Industry 4.0 solution that leverages Artificial Intelligence and Industrial IoT to optimize alloy composition, improve manufacturing quality, and accelerate sustainable production.**
+> **An Industry 4.0 solution that leverages Artificial Intelligence, Industrial IoT, and Explainable AI to optimize alloy composition, improve manufacturing quality, reduce production costs, and accelerate sustainable manufacturing.**
 
 ---
 
@@ -27,26 +27,13 @@
 
 # Project Description
 
-**MetalliSense** is an AI-powered real-time alloy optimization platform developed to transform conventional metal manufacturing into an intelligent, sustainable, and data-driven process.
+MetalliSense is an AI-powered real-time alloy optimization platform designed to modernize conventional metal manufacturing through Artificial Intelligence and Industry 4.0 technologies.
 
-The system continuously acquires live alloy composition data from industrial spectrometers through **OPC UA**, processes it using advanced Machine Learning models, and generates intelligent alloy correction recommendations before production defects occur.
+The platform continuously collects live alloy composition data from industrial spectrometers through OPC UA communication, analyzes the data using Machine Learning models, detects abnormal compositions, and generates intelligent alloy correction recommendations before defects occur.
 
-It now also includes an **Explainable AI Copilot** that provides operator-friendly analysis, AI-generated explanations, chat assistance, and voice-enabled support for faster decision-making on the shop floor.
+To improve operator decision-making, MetalliSense also features an Explainable AI Copilot that provides AI-generated explanations, chat assistance, and voice-enabled support while maintaining a Human-in-the-Loop workflow where operators review and approve AI recommendations.
 
-Unlike traditional approaches that rely on manual intervention and post-production inspection, MetalliSense enables **predictive manufacturing** by providing real-time decision support with a **Human-in-the-Loop** workflow. Operators can review and approve AI-generated recommendations, ensuring transparency, safety, and reliability.
-
-By optimizing alloy composition in real time, MetalliSense helps industries:
-
-- Reduce Material Waste
-- Minimize Re-melting
-- Lower Energy Consumption
-- Reduce Production Costs
-- Decrease Carbon Emissions
-- Improve Alloy Quality
-- Increase Process Efficiency
-- Support Sustainable Manufacturing
-
-The solution is designed with a scalable **Industry 4.0 architecture**, making it suitable for deployment across modern foundries and manufacturing industries.
+By optimizing alloy composition before casting, the platform minimizes material waste, reduces energy consumption, lowers production costs, improves alloy quality, and supports sustainable manufacturing.
 
 ---
 
@@ -54,26 +41,33 @@ The solution is designed with a scalable **Industry 4.0 architecture**, making i
 
 - Real-Time Alloy Composition Monitoring
 - Live Spectrometer Data Integration
+- OPC UA Industrial Connectivity
 - AI-Based Alloy Optimization
+- Isolation Forest Anomaly Detection
+- Random Forest Alloy Recommendation
 - Predictive Quality Analysis
-- Human-in-the-Loop Decision Support
 - Explainable AI Copilot
 - AI Chat Assistance
-- Voice-Enabled AI Explanations
-- Interactive Smart Dashboard
-- OPC UA Industrial Connectivity
+- Voice-Enabled AI Support
+- Human-in-the-Loop Decision Support
+- Smart Interactive Dashboard
 - Complete Traceability & Audit Logging
-- Energy & Cost Optimization
+- Energy Optimization
+- Cost Optimization
 - Carbon Emission Reduction
 - Industry 4.0 Ready Architecture
-- Scalable Enterprise Deployment
+- Enterprise-Scale Deployment
 
 ---
 
 # System Architecture
-<img width="1027" height="577" alt="image" src="https://github.com/user-attachments/assets/4d11ee70-72d3-41b4-8fe8-120485b0d6cb" />
+
+<img width="1027" height="577" alt="System Architecture" src="https://github.com/user-attachments/assets/4d11ee70-72d3-41b4-8fe8-120485b0d6cb"/>
+
+---
 
 # Workflow
+
 ```text
 Industrial Spectrometer
           │
@@ -84,7 +78,13 @@ Industrial Spectrometer
    Node.js Backend API
           │
           ▼
- Machine Learning Engine
+      FastAPI AI Engine
+          │
+          ▼
+ Isolation Forest Model
+          │
+          ▼
+ Random Forest Model
           │
           ▼
  Recommendation Engine
@@ -98,9 +98,61 @@ Industrial Spectrometer
 
 ---
 
+# AI Models
+
+MetalliSense uses Machine Learning models trained on historical alloy composition datasets to provide intelligent real-time recommendations for alloy correction and process optimization.
+
+## AI Pipeline
+
+```text
+Historical Alloy Dataset
+          │
+          ▼
+Data Cleaning & Preprocessing
+          │
+          ▼
+Feature Engineering
+          │
+          ▼
+Model Training
+          │
+          ▼
+Model Evaluation
+          │
+          ▼
+Model Serialization
+          │
+          ▼
+FastAPI Inference API
+          │
+          ▼
+Real-Time Alloy Prediction
+```
+
+## Trained Models
+
+| Model | Purpose |
+|--------|---------|
+| Isolation Forest | Detects abnormal alloy compositions and identifies deviations from target specifications. |
+| Random Forest Regressor | Predicts the optimal alloy element additions required to achieve the desired alloy grade. |
+
+## AI Capabilities
+
+- Real-Time Alloy Composition Analysis
+- Alloy Anomaly Detection
+- Alloy Correction Prediction
+- Intelligent Recommendation Generation
+- Explainable AI
+- Confidence-Based Recommendations
+- Human-in-the-Loop Validation
+- Voice-Enabled AI Copilot
+
+---
+
 # Technology Stack
 
-### Frontend
+## Frontend
+
 - React.js
 - JavaScript
 - HTML5
@@ -108,23 +160,60 @@ Industrial Spectrometer
 - Tailwind CSS
 - Axios
 
-### Backend
+## Backend
+
 - Node.js
 - Express.js
+- OPC UA
 - MongoDB
 - Mongoose
-- OPC UA
 
-### Artificial Intelligence
+## Artificial Intelligence
+
 - Python
 - FastAPI
 - Scikit-Learn
 - Pandas
 - NumPy
-- Google Gemini / AI Copilot
+- Isolation Forest
+- Random Forest Regressor
+- Google Gemini AI
 
-### Database
+## Database
+
 - MongoDB
+
+---
+
+# Repository Structure
+
+```text
+MetalliSense
+│
+├── Frontend/
+│
+├── Backend/
+│
+├── AI/
+│   ├── datasets/
+│   ├── models/
+│   │   ├── isolation_forest.pkl
+│   │   ├── random_forest.pkl
+│   │   ├── scaler.pkl
+│   │   └── encoder.pkl
+│   │
+│   ├── train.py
+│   ├── predict.py
+│   ├── app.py
+│   ├── requirements.txt
+│   └── utils.py
+│
+├── Documentation/
+│
+├── README.md
+│
+└── LICENSE
+```
 
 ---
 
@@ -136,7 +225,7 @@ Industrial Spectrometer
 git clone https://github.com/manishrahul1705/MetalliSense.git
 ```
 
-### Frontend
+## Frontend
 
 ```bash
 cd Frontend
@@ -144,7 +233,7 @@ npm install
 npm run dev
 ```
 
-### Backend
+## Backend
 
 ```bash
 cd Backend
@@ -152,31 +241,88 @@ npm install
 npm start
 ```
 
+## AI Service
+
+```bash
+cd AI
+pip install -r requirements.txt
+python app.py
+```
+
 ---
 
-#  Target Industries
+# Target Industries
 
+- Steel Manufacturing
 - Metal Foundries
 - Casting Industries
-- Metallurgical Manufacturers
-- Manufacturing Enterprises
-- Industrial Process Engineers
+- Metallurgical Plants
+- Industrial Manufacturing
+- Process Engineering
+- Smart Manufacturing
+
+---
+
+# Benefits
+
+- Improves Alloy Quality
+- Reduces Material Waste
+- Prevents Alloy Downgrades
+- Optimizes Alloy Composition
+- Lowers Energy Consumption
+- Reduces Production Cost
+- Enhances Process Efficiency
+- Supports Sustainable Manufacturing
+- Enables Data-Driven Decision Making
+- Increases Operational Reliability
 
 ---
 
 # Sustainability Impact
 
-MetalliSense contributes to:
+MetalliSense contributes towards:
 
 - Sustainable Manufacturing
 - Circular Economy
-- Resource Efficiency
 - Energy Optimization
+- Resource Efficiency
+- Waste Reduction
+- Carbon Emission Reduction
 - Climate Tech
+- Industry 4.0 Transformation
 - Net-Zero Manufacturing
 
 ---
 
-#  Vision
+# Future Scope
 
-**To empower manufacturing industries with intelligent, AI-driven decision support that enhances productivity, minimizes environmental impact, and accelerates the transition toward sustainable Industry 4.0 manufacturing.**
+- Deep Learning-Based Alloy Prediction
+- Digital Twin Integration
+- Predictive Maintenance
+- Multi-Plant Deployment
+- Automated Furnace Control
+- Edge AI Deployment
+- Cloud Analytics Dashboard
+- ERP & MES Integration
+
+---
+
+# Vision
+
+**To empower manufacturing industries with intelligent AI-driven decision support that improves alloy quality, enhances operational efficiency, minimizes environmental impact, and accelerates the transition toward sustainable Industry 4.0 manufacturing.**
+
+---
+
+# License
+
+This project is developed for academic research, innovation, and hackathon purposes.
+
+---
+
+# Acknowledgement
+
+We sincerely thank our mentors, faculty members, and Sri Eshwar College of Engineering for their continuous guidance and support throughout the development of MetalliSense.
+
+---
+
+## Made with ❤️ by Team AUTOM SQUAD

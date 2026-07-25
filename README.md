@@ -1,73 +1,59 @@
 # MetalliSense
-## AI-Powered Real-Time Alloy Optimization for Sustainable Manufacturing
+### AI-Powered Real-Time Alloy Optimization for Sustainable Manufacturing
 
-> **An Industry 4.0 solution that leverages Artificial Intelligence, Industrial IoT, and Explainable AI to optimize alloy composition, improve manufacturing quality, reduce production costs, and accelerate sustainable manufacturing.**
-
----
-
-# Team Details
-
-| **Team Name** | **AUTOM SQUAD** |
-|---------------|-----------------|
-| **Project Title** | **MetalliSense – AI-Powered Real-Time Alloy Optimization for Sustainable Manufacturing** |
-| **Institution** | Sri Eshwar College of Engineering, Coimbatore |
-| **Domain** | Artificial Intelligence • Industry 4.0 • Industrial IoT • Sustainable Manufacturing |
-
-## Team Members
-
-| **Member** | **Role** |
-|------------|----------|
-| **Manish Raghul S J** | Team Lead • Business Strategy |
-| **Nethra V D** | AI/ML Engineer • Full Stack Developer |
-| **Sathish M** | Backend Developer • System Integration |
-| **Deepika K** | Frontend Developer • UI/UX Designer |
-| **Nicksan Raj** | Research & Documentation |
+> Real-time spectrometer monitoring + ML anomaly detection + closed-loop RL alloy correction — with a human always in the loop.
 
 ---
 
-# Project Description
+## Team — AUTOM SQUAD
+Sri Eshwar College of Engineering, Coimbatore
 
-MetalliSense is an AI-powered real-time alloy optimization platform designed to modernize conventional metal manufacturing through Artificial Intelligence and Industry 4.0 technologies.
-
-The platform continuously collects live alloy composition data from industrial spectrometers through OPC UA communication, analyzes the data using Machine Learning models, detects abnormal compositions, and generates intelligent alloy correction recommendations before defects occur.
-
-To improve operator decision-making, MetalliSense also features an Explainable AI Copilot that provides AI-generated explanations, chat assistance, and voice-enabled support while maintaining a Human-in-the-Loop workflow where operators review and approve AI recommendations.
-
-By optimizing alloy composition before casting, the platform minimizes material waste, reduces energy consumption, lowers production costs, improves alloy quality, and supports sustainable manufacturing.
-
----
-
-# Key Features
-
-- Real-Time Alloy Composition Monitoring
-- Live Spectrometer Data Integration
-- OPC UA Industrial Connectivity
-- AI-Based Alloy Optimization
-- Isolation Forest Anomaly Detection
-- Random Forest Alloy Recommendation
-- Predictive Quality Analysis
-- Explainable AI Copilot
-- AI Chat Assistance
-- Voice-Enabled AI Support
-- Human-in-the-Loop Decision Support
-- Smart Interactive Dashboard
-- Complete Traceability & Audit Logging
-- Energy Optimization
-- Cost Optimization
-- Carbon Emission Reduction
-- Industry 4.0 Ready Architecture
-- Enterprise-Scale Deployment
+| Member | Role |
+|---|---|
+| Manish Raghul S J | Team Lead • Business Strategy |
+| Nethra V D | AI/ML Engineer • Full Stack |
+| Sathish M | Backend • System Integration |
+| Deepika K | Frontend • UI/UX |
+| Nicksan Raj | Research & Documentation |
 
 ---
 
-# System Architecture
+## Problem
+Alloy composition drifts during manufacturing. Corrections today rely on operator experience and static tables — no system learns from what actually worked. Off-spec batches mean wasted material, energy, and cost.
 
+## Solution
+MetalliSense reads live spectrometer data (OPC UA), detects anomalies, recommends alloy corrections, explains them in plain language, and — its key differentiator — **learns continuously from operator decisions and real outcomes** via a closed-loop RL engine. Every recommendation still requires human approval.
+
+---
+
+## Features
+- Real-time OPC UA spectrometer integration
+- ML anomaly detection + alloy correction recommendations
+- **Closed-loop RL engine** — improves from every operator decision, online
+- Explainable AI copilot (chat + voice)
+- Human-in-the-loop approval on every action
+- Manufacturing safety constraints, full audit trail
+- Firebase Auth, interactive dashboard
+
+---
+
+## Tech Stack
+
+| Layer | Stack |
+|---|---|
+| Frontend | React, Vite, Tailwind, Axios, Recharts, Firebase Auth |
+| Backend | Node.js, Express, MongoDB, Firebase Admin, OPC UA |
+| AI Service | Python, FastAPI, Scikit-learn (anomaly + alloy models) |
+| Agent/Copilot | Python, FastAPI, Groq LLM, ElevenLabs, **SGDRegressor (RL)** |
+
+---
+
+## Architecture
 <img width="1027" height="577" alt="System Architecture" src="https://github.com/user-attachments/assets/4d11ee70-72d3-41b4-8fe8-120485b0d6cb"/>
 
 ---
 
-# Workflow
-
+## Workflow
 ```text
 Industrial Spectrometer
           │
@@ -95,219 +81,122 @@ Industrial Spectrometer
           ▼
  Operator Approval
 ```
-
 ---
 
-# AI Models
-
-MetalliSense uses Machine Learning models trained on historical alloy composition datasets to provide intelligent real-time recommendations for alloy correction and process optimization.
-
-## AI Pipeline
-
-```text
-Historical Alloy Dataset
-          │
-          ▼
-Data Cleaning & Preprocessing
-          │
-          ▼
-Feature Engineering
-          │
-          ▼
-Model Training
-          │
-          ▼
-Model Evaluation
-          │
-          ▼
-Model Serialization
-          │
-          ▼
-FastAPI Inference API
-          │
-          ▼
-Real-Time Alloy Prediction
+## Folder Structure
 ```
-
-## Trained Models
-
-| Model | Purpose |
-|--------|---------|
-| Isolation Forest | Detects abnormal alloy compositions and identifies deviations from target specifications. |
-| Random Forest Regressor | Predicts the optimal alloy element additions required to achieve the desired alloy grade. |
-
-## AI Capabilities
-
-- Real-Time Alloy Composition Analysis
-- Alloy Anomaly Detection
-- Alloy Correction Prediction
-- Intelligent Recommendation Generation
-- Explainable AI
-- Confidence-Based Recommendations
-- Human-in-the-Loop Validation
-- Voice-Enabled AI Copilot
-
----
-
-# Technology Stack
-
-## Frontend
-
-- React.js
-- JavaScript
-- HTML5
-- CSS3
-- Tailwind CSS
-- Axios
-
-## Backend
-
-- Node.js
-- Express.js
-- OPC UA
-- MongoDB
-- Mongoose
-
-## Artificial Intelligence
-
-- Python
-- FastAPI
-- Scikit-Learn
-- Pandas
-- NumPy
-- Isolation Forest
-- Random Forest Regressor
-- Google Gemini AI
-
-## Database
-
-- MongoDB
-
----
-
-# Repository Structure
-
-```text
-MetalliSense
-│
-├── Frontend/
-│
-├── Backend/
-│
-├── AI/
-│   ├── datasets/
-│   ├── models/
-│   │   ├── isolation_forest.pkl
-│   │   ├── random_forest.pkl
-│   │   ├── scaler.pkl
-│   │   └── encoder.pkl
-│   │
-│   ├── train.py
-│   ├── predict.py
-│   ├── app.py
-│   ├── requirements.txt
-│   └── utils.py
-│
-├── Documentation/
-│
-├── README.md
-│
-└── LICENSE
+MetalliSense/
+├── MetalliSense_Frontend/   React app (pages, services, context)
+├── MetalliSense_Backend/    Express API (routes, controllers, models)
+├── MetalliSense_AI/         FastAPI — anomaly + alloy models
+└── MetalliSense_Agent/      FastAPI — copilot + closed-loop RL engine
 ```
 
 ---
 
-# Installation
-
-## Clone Repository
+## Setup
 
 ```bash
 git clone https://github.com/manishrahul1705/MetalliSense.git
-```
 
-## Frontend
+# AI Service
+cd MetalliSense_AI && pip install -r requirements.txt
+python app/training/train_anomaly.py && python app/training/train_alloy_agent.py
+uvicorn app.main:app --port 8000
 
-```bash
-cd Frontend
-npm install
-npm run dev
-```
+# Agent Service
+cd MetalliSense_Agent && pip install -r requirements.txt
+python app/training/train_anomaly.py && python app/training/train_alloy_agent.py
+python app/training/train_rl.py
+uvicorn app.main:app --port 8001
 
-## Backend
+# Backend — add .env (DATABASE, JWT_SECRET, FIREBASE_*)
+cd MetalliSense_Backend && npm install && node server.js
 
-```bash
-cd Backend
-npm install
-npm start
-```
-
-## AI Service
-
-```bash
-cd AI
-pip install -r requirements.txt
-python app.py
+# Frontend — add .env (VITE_API_BASE_URL, VITE_FIREBASE_*)
+cd MetalliSense_Frontend && npm install && npm run dev
 ```
 
 ---
 
-# Target Industries
+## Key API Endpoints
 
-- Steel Manufacturing
-- Metal Foundries
-- Casting Industries
-- Metallurgical Plants
-- Industrial Manufacturing
-- Process Engineering
-- Smart Manufacturing
-
----
-
-# Benefits
-
-- Improves Alloy Quality
-- Reduces Material Waste
-- Prevents Alloy Downgrades
-- Optimizes Alloy Composition
-- Lowers Energy Consumption
-- Reduces Production Cost
-- Enhances Process Efficiency
-- Supports Sustainable Manufacturing
-- Enables Data-Driven Decision Making
-- Increases Operational Reliability
+| Endpoint | Description |
+|---|---|
+| `POST /anomaly/predict` | Anomaly score for a composition |
+| `POST /alloy/recommend` | Base correction recommendation |
+| `POST /rl/optimize` | 3 ranked RL correction strategies |
+| `POST /rl/feedback` | Submit decision — **updates policy live** |
+| `GET /rl/policy/status` | Policy learning progress |
+| `POST /copilot/explain` | Natural-language explanation |
 
 ---
 
-# Sustainability Impact
+## AI/ML Workflow
+```
+Historical data (200k rows) → feature engineering →
+  Anomaly model (Isolation Forest-style)
+  Alloy model (Gradient Boosting, multi-output)
+→ serialized (.pkl) → FastAPI inference → real-time prediction
+```
 
-MetalliSense contributes towards:
+## Closed-Loop RL Engine (core differentiator)
+A contextual-bandit policy (`SGDRegressor`, online `partial_fit`) — not deep RL, since alloy correction is a single-shot decision, not a sequential control problem.
 
-- Sustainable Manufacturing
-- Circular Economy
-- Energy Optimization
-- Resource Efficiency
-- Waste Reduction
-- Carbon Emission Reduction
-- Climate Tech
-- Industry 4.0 Transformation
-- Net-Zero Manufacturing
+1. **Propose** — 3 candidates (conservative/balanced/aggressive), safety-clipped, ranked by predicted reward. Always `requires_human_approval: true`.
+2. **Learn** — operator feedback + measured outcomes update the Q-function immediately, no retraining pipeline.
+3. **Audit** — every decision logged for traceability.
 
----
-
-# Future Scope
-
-- Deep Learning-Based Alloy Prediction
-- Digital Twin Integration
-- Predictive Maintenance
-- Multi-Plant Deployment
-- Automated Furnace Control
-- Edge AI Deployment
-- Cloud Analytics Dashboard
-- ERP & MES Integration
+**Verified:** 60,000-update offline bootstrap from historical data; live feedback test moved average reward 0.3819 → 0.3933 in real time.
 
 ---
 
-# Vision
+## Security
+- Firebase Auth (no custom password storage)
+- JWT verification on every protected route
+- Secrets in `.env`, never committed
+- Human approval required before any alloy change — AI never auto-executes
+- Server-side safety constraints, independent of frontend
+- Full audit logging
 
-**To empower manufacturing industries with intelligent AI-driven decision support that improves alloy quality, enhances operational efficiency, minimizes environmental impact, and accelerates the transition toward sustainable Industry 4.0 manufacturing.**
+## Testing & Performance
+- Anomaly + alloy models: trained and validated on 200k-row dataset, live-tested via API
+- RL engine: 60k-update bootstrap + live online update confirmed
+- Frontend: clean production build, zero errors
+- All services expose `/health` with per-subsystem status
 
+## Challenges Faced
+- Isolated subsystem init so one missing API key doesn't silently break unrelated features
+- Fixed misleading auth errors (server misconfig vs. real invalid token)
+- Chose a lightweight contextual bandit over deep RL — same closed-loop learning, far less infrastructure
+
+## Future Scope
+- Deep learning models as more labeled data accumulates
+- Digital twin integration, predictive maintenance
+- Multi-plant RL policies, edge deployment
+- Real (non-simulated) outcome pipeline for RL training
+
+---
+
+## Demo
+- Video: _[[add link](https://drive.google.com/file/d/1MyXXWNe0MHYiYzeLW-OMMofrn2otPtRv/view?usp=sharing)]_
+- Screenshots: <img width="1916" height="906" alt="Screenshot 2026-03-17 230849" src="https://github.com/user-attachments/assets/51634afc-0d27-4f5e-83bb-becebbe7761b" />
+- Documentation: _[[add here](https://drive.google.com/file/d/1fFIEvOiaSyYC7mO_7a9Chs_Q3ohoELFf/view?usp=sharing)]_
+
+## References
+
+1. [Real-Time Melt Chemistry Monitoring — Tecnar Alulibs](https://moltenmetalanalyzer.tecnar.com/aluminum/chemistry-monitoring/)
+2. [AI to Cut Scrap and Energy in Casting — Valve World Americas](https://valve-world-americas.com/using-artificial-intelligence-ai-to-reduce-scrap-and-energy-usage-in-the-casting-process/)
+3. [AI Transforming Casting Quality — TVARIT & SAG (Foundry Planet)](https://www.foundry-planet.com/d/reducing-scrap-raising-standards-how-ai-is-transforming-casting/)
+4. [AI-Enabled Optimization in Foundries — India Case (LinkedIn)](https://www.linkedin.com/pulse/reigniting-growth-indias-foundries-harnessing-ai-tackle-challenges-rwbpc)
+5. [AI and Computational Methods for Metallic Alloys — Frontiers in Materials](https://www.frontiersin.org/journals/materials/articles/10.3389/fmats.2025.1645227/full)
+6. [OPC UA-Based Real-Time Integration for Industrial Devices — MachineMetrics](https://www.machinemetrics.com/connectivity/protocols/opc-ua)
+7. [Complete Project Documentation](https://drive.google.com/uc?export=download&id=1t5t6FkgSQS77V5sxvMuya3mn057dNp2B)
+
+**Technical References**
+
+[FastAPI](https://fastapi.tiangolo.com/) · [Scikit-learn](https://scikit-learn.org/) · [OPC UA Foundation](https://opcfoundation.org/about/opc-technologies/opc-ua/) · [Firebase Auth](https://firebase.google.com/docs/auth) · [Groq API](https://console.groq.com/docs)
+
+---
+
+**Team AUTOM SQUAD**

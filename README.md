@@ -179,9 +179,9 @@ A contextual-bandit policy (`SGDRegressor`, online `partial_fit`) — not deep R
 ---
 
 ## Demo
-- Video: _[[add link](https://drive.google.com/file/d/1MyXXWNe0MHYiYzeLW-OMMofrn2otPtRv/view?usp=sharing)]_
+- Video: _[[demo video link Click Here ](https://drive.google.com/file/d/1MyXXWNe0MHYiYzeLW-OMMofrn2otPtRv/view?usp=sharing)]_
 - Screenshots: <img width="1916" height="906" alt="Screenshot 2026-03-17 230849" src="https://github.com/user-attachments/assets/51634afc-0d27-4f5e-83bb-becebbe7761b" />
-- Documentation: _[[add here](https://drive.google.com/file/d/1fFIEvOiaSyYC7mO_7a9Chs_Q3ohoELFf/view?usp=sharing)]_
+- Documentation: _[[documentation link Click Here](https://drive.google.com/file/d/1fFIEvOiaSyYC7mO_7a9Chs_Q3ohoELFf/view?usp=sharing)]_
 
 ## References
 
